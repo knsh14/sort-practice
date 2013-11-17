@@ -9,6 +9,6 @@ class TestCase_Sort < Test::Unit::TestCase
     end
     
     def test_sorting
-        assert_equal(@rand_nbr_arry,@sort_obj.sorting) 
+        assert_equal(@nbr_arry,@sort_obj.sorting) 
     end
 end
