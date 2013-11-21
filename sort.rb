@@ -4,7 +4,7 @@ class SortLibrary
     end
     def sorting
        #set each algorithms
-       bubble_sort
+       shaker_sort
     end
 
     def bubble_sort
@@ -15,6 +15,10 @@ class SortLibrary
                 end
             end
         end
+        @list
+    end
+
+    def shaker_sort
         @list
     end
 end
