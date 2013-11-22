@@ -20,6 +20,26 @@ class SortLibrary
     end
 
     def shaker_sort
-        @list
+        ss = @list
+        count_j,count_k = 0,0
+        0.upto(ss.size-1) do |i|
+           (ss.size-1).downto(i) do |j|
+                if ss[j] < ss[j-1] then
+                    ss[j], ss[j-1] = ss[j-1], ss[j]
+                end
+                count_j = j
+           end
+
+           i.upto(ss.size-1-i) do |k|
+                if ss[k] < ss[k-1] then
+                    ss[k], ss[k-1] = ss[k-1], ss[k]
+                end
+                count_k = k
+           end
+           if count_j == count_k then
+               break
+           end
+        end
+        ss
     end
 end
