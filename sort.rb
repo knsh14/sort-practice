@@ -8,14 +8,15 @@ class SortLibrary
     end
 
     def bubble_sort
-        0.upto(@list.size-1) do |i|
-            (@list.size-1).downto(i) do |j|
-                if @list[j] < @list[j-1] then
-                    @list[j], @list[j-1] = @list[j-1], @list[j]
+        bs = @list
+        0.upto(bs.size-1) do |i|
+            (bs.size-1).downto(i) do |j|
+                if bs[j] < bs[j-1] then
+                    bs[j], bs[j-1] = bs[j-1], bs[j]
                 end
             end
         end
-        @list
+        bs
     end
 
     def shaker_sort
