@@ -4,7 +4,7 @@ class SortLibrary
     end
     def sorting
        #set each algorithms
-       shaker_sort
+       insection_sort
     end
 
     def bubble_sort
@@ -41,5 +41,17 @@ class SortLibrary
            end
         end
         ss
+    end
+
+    def insection_sort
+        is = @list
+        1.upto(is.size-1) do |i|
+            j = i
+            while is[j-1] > is[j] and j > 0 do
+                is[j],is[j-1] = is[j-1],is[j]
+                j -= 1
+            end
+        end
+        is
     end
 end
