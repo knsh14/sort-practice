@@ -59,8 +59,7 @@ class SortLibrary
 
     def shell_sort
         shs = @list
-        #interval = [1,4,13,40,121].select{|i| i <= shs.size/2}
-        interval = [4,1]
+        interval = [1,4,13,40,121].select{|i| i <= shs.size/2}.reverse
 
         for h in interval do
             0.upto(h-1) do |i|
