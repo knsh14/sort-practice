@@ -59,7 +59,8 @@ class SortLibrary
 
     def shell_sort
         shs = @list
-        interval = [1,4,13,40,121].select{|i| i <= shs.size/2}.reverse
+        #interval = [1,4,13,40,121].select{|i| i <= shs.size/2}.reverse
+        interval = generate_interval(0, shs.size/2, []).reverse
 
         for h in interval do
             0.upto(h-1) do |i|
@@ -74,4 +75,15 @@ class SortLibrary
         end
         shs
     end
+
+    def generate_interval(current, max, intervals)
+        if current > max then
+            intervals
+        else
+            tmp = 3 * current + 1
+            intervals << tmp
+            return generate_interval(tmp, max, intervals)
+        end
+    end
+    private :generate_interval
 end
