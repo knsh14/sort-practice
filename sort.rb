@@ -4,7 +4,7 @@ class SortLibrary
     end
     def sorting
        #set each algorithms
-       insection_sort
+       shell_sort
     end
 
     def bubble_sort
@@ -53,5 +53,24 @@ class SortLibrary
             end
         end
         is
+    end
+
+    def shell_sort
+        shs = @list
+        #interval = [1,4,13,40,121].select{|i| i <= shs.size/2}
+        interval = [4,1]
+
+        for h in interval do
+            0.upto(h-1) do |i|
+                i.step(shs.size-1,h) do |j|
+                    k = j
+                    while shs[k-h] > shs[k] and k > i do
+                        shs[k],shs[k-h] = shs[k-h],shs[k]
+                        k -= h
+                    end
+                end
+            end
+        end
+        shs
     end
 end
