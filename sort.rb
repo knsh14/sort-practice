@@ -4,7 +4,7 @@ class SortLibrary
     end
     def sorting
        #set each algorithms
-       insection_sort
+       shell_sort
     end
 
     def bubble_sort
@@ -53,5 +53,10 @@ class SortLibrary
             end
         end
         is
+    end
+
+    def shell_sort
+        shs = @list
+        shs
     end
 end
