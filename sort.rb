@@ -7,6 +7,7 @@ class SortLibrary
        shell_sort
     end
 
+    # Exchange sort algorithms
     def bubble_sort
         bs = @list
         0.upto(bs.size-1) do |i|
@@ -43,6 +44,7 @@ class SortLibrary
         ss
     end
 
+    # insection sort algorithms
     def insection_sort
         is = @list
         1.upto(is.size-1) do |i|
